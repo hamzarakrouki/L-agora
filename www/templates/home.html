@@ -1,10 +1,48 @@
-<ion-view title="home">
 
-  
-   
+      <ion-view view-title="home">
+        <ion-slide-box on-slide-changed="slideChanged(index)">
+          <ion-slide>
+            <h3>Thank you for choosing the Awesome App!</h3>
+            <div id="logo" >
+              <img src="templates/captainamerica_hero.png">
+            </div>
+            <p>
+              We've worked super hard to make you happy.
+            </p>
+            <p>
+              But if you are angry, too bad.
+            </p>
+          </ion-slide>
+          <ion-slide>
+            <h3>Using Awesome</h3>
+            
+            <div id="list">
+              <h5>Just three steps:</h5>
+           
+            </div>
+          </ion-slide>
+          <ion-slide>
+            <h3>Any questions?</h3>
+            <p>
+              Too bad!
+            </p>
+          </ion-slide>
+        </ion-slide-box>
+      </ion-view>
+          <div class="tabs tabs-icon-only">
+  <a class="tab-item" ui-sref="home">
+    <i class="icon ion-home"></i>
+  </a>
+  <a class="tab-item" ui-sref="listfilm">
+    <i class="icon ion-android-film"></i>
+  </a>
+  <a class="tab-item">
+    <i class="icon ion-earth"></i>
+  </a>
+</div>
+
+
 		
-	</ion-content>
-</ion-view>
-</ion-content>
+
 
 

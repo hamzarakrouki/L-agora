@@ -26,12 +26,20 @@ angular.module('starter', ['ionic'])
 })
 
 .controller('HomeCtrl',function($scope){
-$scope.trustSrc = function(src) {
-    return $sce.trustAsResourceUrl(src);
-  }
-  $scope.movie = {
-    src : "https://www.youtube.com/embed/dKrVegVI0Us",
-    title : "Egghead.io AngularJS Binding"
+
+$scope.startApp = function() {
+    $state.go('home');
+  };
+  $scope.next = function() {
+    $ionicSlideBoxDelegate.next();
+  };
+  $scope.previous = function() {
+    $ionicSlideBoxDelegate.previous();
+  };
+
+  // Called each time the slide changes
+  $scope.slideChanged = function(index) {
+    $scope.slideIndex = index;
   };
 
 
