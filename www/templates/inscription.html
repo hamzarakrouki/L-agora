@@ -1,0 +1,38 @@
+<ion-view view-title="Login" name="login-view">
+  <ion-content class="padding">
+
+    <form name="testForm">
+
+        <div class="list">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Adresse e-mail</span>
+                <input type="email" name="email" placeholder="Adresse e-mail" ng-model="email" ng-required="true" ng-maxlength="30">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Confirmation Email</span>
+                <input type="email" name="confemail" placeholder="Confirmation Email" ng-model="confemail" ng-required="true" ng-maxlength="30">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Mot de passe</span>
+                <input type="password" name="password" placeholder="Mot de passe" ng-model="password" ng-required="true" ng-minlength="8" ng-maxlength="30">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Confirmation mdp</span>
+                <input type="password" name="confpassword" placeholder="Confirmation mdp" ng-model="confpassword" ng-required="true" ng-minlength="8" ng-maxlength="30" ->
+            </label>
+            <div class="item errors">
+                <!--validators-->
+                <p ng-show="testForm.email.$error.required">Email is required</p>
+                <p ng-show="testForm.email.$error.maxlength">Email is too long</p>
+                <p ng-show="testForm.password.$error.required">Password is required</p>
+                <p ng-show="testForm.password.$error.minlength">Password is too short</p>
+                <p ng-show="testForm.password.$error.maxlength">Password is too long</p>
+                <!--after submit -->
+                <span> {{erreur}} </span>
+            </div>
+        </div>
+        <button class="button button-block button-outline button-stable" ng-click="submit(testForm)">Submit</button>
+        <button class="button button-block button-dark" ng-click="dev()">DEV</button>
+    </form>
+</ion-content>
+</ion-view>

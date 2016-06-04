@@ -1,4 +1,12 @@
 {
-  "name": "l'agora",
-  "app_id": ""
+  "name": "cinema",
+  "app_id": "",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }

@@ -1,0 +1,39 @@
+<ion-view title="Captain America">
+ <ion-side-menu side="left">
+    <ion-list >
+      <ion-item menu-close ui-sref="home">
+      <i class="icon ion-android-home">
+        
+      </i>   
+      Acceuil     
+      </ion-item>
+     
+      <ion-item menu-close ui-sref="listfilm">
+       <i class="icon ion-android-film">
+        
+      </i> 
+        Nos Prochain Film
+      </ion-item>
+    </ion-list>
+  </ion-side-menu>
+  </ion-side-menus>
+	<ion-content overflow-scroll="true">
+	<div class="list card" ng-repeat="film in films">
+
+   <div class="item item-image">
+    <h2>{{film.name}}</h2>
+    <p>{{film.time}}</p>
+    <h2>Trailer</h2>
+
+  </div>
+
+  <div class="item item-body">
+   <iframe src=""  dynamic-url dynamic-url-src="{{film.url}}" ></iframe>
+  </div>
+
+</div>
+
+		
+	</ion-content>
+</ion-view>
+</ion-content>
